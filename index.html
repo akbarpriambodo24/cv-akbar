@@ -134,12 +134,6 @@
 </head>
 <body>
 
-  <!-- BACKGROUND MUSIC (HAPUS KALAU NGGAK MAU) -->
-  <audio id="bg-music" loop>
-    <source src="music.mp3" type="audio/mpeg">
-    Browser Anda tidak mendukung audio.
-  </audio>
-
   <div class="container">
 
     <!-- SIDEBAR -->
@@ -187,7 +181,7 @@
     <!-- MAIN -->
     <main class="main">
 
-      <!-- PORTOFOLIO -->
+      <!-- PORTOFOLIO - SEMUA GAMBAR SESUAI FILE KAMU -->
       <section class="portfolio">
         <h3 class="section-title"><i class="fas fa-project-diagram"></i> Portofolio</h3>
         <div class="portfolio-grid">
@@ -281,42 +275,3 @@
           <div class="company">Universitas Bina Sarana Informatika</div>
           <div class="period">2014 – 2017</div>
         </div>
-      </section>
-
-    </main>
-  </div>
-
-  <!-- ZOOM MODAL -->
-  <div id="zoom-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); z-index:9999; justify-content:center; align-items:center; cursor:zoom-out;">
-    <img id="zoom-img" style="max-width:90%; max-height:90%; border-radius:8px; box-shadow:0 0 30px rgba(0,0,0,0.8);">
-    <span id="close-zoom" style="position:absolute; top:20px; right:30px; color:white; font-size:40px; font-weight:bold; cursor:pointer;">×</span>
-  </div>
-
-  <script>
-    document.getElementById('profile-photo').ondblclick = function() {
-      const file = prompt('Masukkan nama file foto (contoh: Foto-saya.jpg):');
-      if (file) this.src = file;
-    };
-
-    const bgMusic = document.getElementById('bg-music');
-    bgMusic.volume = 0.3;
-    document.body.addEventListener('click', function() {
-      if (bgMusic.paused) bgMusic.play().catch(() => {});
-    }, { once: true });
-
-    function openZoom(src) {
-      const modal = document.getElementById('zoom-modal');
-      const img = document.getElementById('zoom-img');
-      img.src = src;
-      modal.style.display = 'flex';
-    }
-
-    document.getElementById('close-zoom').onclick = () => document.getElementById('zoom-modal').style.display = 'none';
-    document.getElementById('zoom-modal').onclick = function(e) {
-      if (e.target === this) document.getElementById('zoom-modal').style.display = 'none';
-    };
-  </script>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</body>
-</html>
