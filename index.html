@@ -17,10 +17,10 @@
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
-    /* GANTI BACKGROUND GAMBAR DI SINI */
+    /* BACKGROUND GAMBAR - SUDAH BENAR */
     body {
       font-family: 'Inter', 'Segoe UI', sans-serif;
-      background: url("Background.jpg") center/cover no-repeat fixed; /* <-- GANTI 'background.jpg' DENGAN GAMBAR KAMU */
+      background: url('Background.jpg') center/cover no-repeat fixed;
       color: var(--text);
       line-height: 1.7;
       min-height: 100vh;
@@ -38,7 +38,6 @@
       .container { grid-template-columns: 1fr; }
     }
 
-    /* BIRU TUA */
     .sidebar, .main {
       background: #1e293b;
       color: #e2e8f0;
@@ -65,7 +64,6 @@
     .skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
     .skill { background: var(--primary); color: #0f172a; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
 
-    /* KOTAK LINK BARU */
     .action-boxes {
       display: flex;
       flex-direction: column;
@@ -88,43 +86,20 @@
       transform: translateY(-4px);
       box-shadow: 0 8px 20px rgba(59,130,246,0.5);
     }
-    .action-box i {
-      margin-right: 8px;
-    }
+    .action-box i { margin-right: 8px; }
 
-    /* PENGALAMAN BERTINGKAT */
-    .company-group {
-      margin-bottom: 2rem;
-      border-left: 3px solid var(--primary);
-      padding-left: 1.2rem;
-    }
-    .company-name {
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: var(--primary);
-      margin-bottom: 0.8rem;
-    }
-    .job {
-      margin-bottom: 1.2rem;
-      padding-left: 1rem;
-      position: relative;
-    }
+    .company-group { margin-bottom: 2rem; border-left: 3px solid var(--primary); padding-left: 1.2rem; }
+    .company-name { font-weight: 600; font-size: 1.1rem; color: var(--primary); margin-bottom: 0.8rem; }
+    .job { margin-bottom: 1.2rem; padding-left: 1rem; position: relative; }
     .job::before {
-      content: "";
-      position: absolute;
-      left: -1rem;
-      top: 0.5rem;
-      width: 8px;
-      height: 8px;
-      background: var(--primary);
-      border-radius: 50%;
+      content: ""; position: absolute; left: -1rem; top: 0.5rem;
+      width: 8px; height: 8px; background: var(--primary); border-radius: 50%;
     }
     .job-title { font-weight: 600; color: #e2e8f0; font-size: 1rem; }
     .period { color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.4rem; }
     .job-desc ul { margin-top: 0.4rem; padding-left: 1.5rem; list-style: disc; }
     .job-desc li { margin-bottom: 0.3rem; font-size: 0.92rem; color: #cbd5e1; }
 
-    /* PORTOFOLIO */
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -132,29 +107,19 @@
       margin-top: 1rem;
     }
     .portfolio-item {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      transition: 0.3s;
-      cursor: zoom-in;
+      position: relative; border-radius: 12px; overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.3s; cursor: zoom-in;
     }
     .portfolio-item:hover { transform: translateY(-8px); box-shadow: 0 12px 25px rgba(0,0,0,0.4); }
     .portfolio-img, .portfolio-video {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      background: #1e293b;
+      width: 100%; height: 180px; object-fit: cover; background: #1e293b;
     }
     .portfolio-video { object-fit: contain; background: #000; }
     .portfolio-overlay {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
+      position: absolute; bottom: 0; left: 0; right: 0;
       background: linear-gradient(transparent, rgba(0,0,0,0.9));
-      color: white;
-      padding: 1.5rem 1rem 1rem;
-      transform: translateY(50%);
-      transition: 0.3s;
+      color: white; padding: 1.5rem 1rem 1rem;
+      transform: translateY(50%); transition: 0.3s;
     }
     .portfolio-item:hover .portfolio-overlay { transform: translateY(0); }
     .portfolio-overlay h4 { font-size: 1rem; margin-bottom: 0.3rem; }
@@ -170,7 +135,7 @@
 </head>
 <body>
 
-  <!-- BACKGROUND MUSIC: GANTI 'music.mp3' DENGAN FILE KAMU -->
+  <!-- BACKGROUND MUSIC (OPSIONAL - HAPUS KALAU NGGAK MAU) -->
   <audio id="bg-music" loop>
     <source src="music.mp3" type="audio/mpeg">
     Browser Anda tidak mendukung audio.
@@ -180,18 +145,17 @@
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
-      <img src="foto-saya.jpg" alt="Foto Profil" class="photo" id="profile-photo">
+      <!-- FOTO PROFIL - SUDAH BENAR -->
+      <img src="Foto-saya.jpg" alt="Foto Profil" class="photo" id="profile-photo">
       <h1 class="name">Akbar Priambodo Riyono</h1>
       <p class="title">Data Analyst</p>
 
       <p class="about">
         Data Analyst berpengalaman dalam membuat dashboard analitik menggunakan BI Tools, Node.js, dan Python. 
         Memiliki kemampuan dalam mengolah data kompleks menjadi dashboard dengan integrasi data real-time untuk membantu proses pengambilan keputusan.
-         Telah sukses implementasi dalam berbagai project di <i>upwork</i>
-        dan perusahaan.
+         Telah sukses implementasi dalam berbagai project di <i>upwork</i> dan perusahaan.
       </p>
 
-      <!-- KONTAK: TETAP BISA DIKLIK -->
       <h3 class="section-title"><i class="fas fa-phone"></i> Kontak</h3>
       <div class="contact-info">
         <p>📧 <a href="mailto:akbarpriambodo24@gmail.com">akbarpriambodo24@gmail.com</a></p>
@@ -200,7 +164,6 @@
         <p>📍 Jakarta, Indonesia</p>
       </div>
 
-      <!-- 2 KOTAK LINK DI BAWAH KONTAK -->
       <div class="action-boxes">
         <a href="https://wa.me/6282114391159?text=Halo%20Akbar,%20saya%20ingin%20menghubungi%20Anda" target="_blank" class="action-box">
           <i class="fas fa-comment-dots"></i> Contact Me
@@ -226,58 +189,51 @@
     <!-- MAIN -->
     <main class="main">
 
-      <!-- PORTOFOLIO: 4 GAMBAR + 1 VIDEO -->
+      <!-- PORTOFOLIO - SEMUA GAMBAR DI ROOT -->
       <section class="portfolio">
         <h3 class="section-title"><i class="fas fa-project-diagram"></i> Portofolio</h3>
         <div class="portfolio-grid">
-          <!-- GAMBAR 1 -->
           <div class="portfolio-item">
-            <img src="portofolio/BI Dashboard 1.jpg" alt="Dashboard" class="portfolio-img" onclick="openZoom(this.src)">
+            <img src="BI Dashboard 1.jpg" alt="Dashboard" class="portfolio-img" onclick="openZoom(this.src)">
             <div class="portfolio-overlay">
               <h4>Sales Dashboard</h4>
               <p>Power BI,SQL,Python</p>
             </div>
           </div>
-          <!-- GAMBAR 2 -->
           <div class="portfolio-item">
-            <img src="portofolio/Bi Dashboard 2.jpeg" alt="Scanner" class="portfolio-img" onclick="openZoom(this.src)">
+            <img src="Bi Dashboard 2.jpeg" alt="Scanner" class="portfolio-img" onclick="openZoom(this.src)">
             <div class="portfolio-overlay">
               <h4>Healtcare Dashboard</h4>
               <p>Power BI, Node.JS,SQL,API</p>
             </div>
           </div>
-          <!-- GAMBAR 3 -->
           <div class="portfolio-item">
-            <img src="portofolio/Excel dashboard 1.jpg" alt="Finance" class="portfolio-img" onclick="openZoom(this.src)">
+            <img src="Excel dashboard 1.jpg" alt="Finance" class="portfolio-img" onclick="openZoom(this.src)">
             <div class="portfolio-overlay">
               <h4>Sales, Stock, Costumer Dashboard</h4>
               <p>Microsoft Excel, Dax, Macro</p>
             </div>
           </div>
-          <!-- GAMBAR 4 -->
           <div class="portfolio-item">
-            <img src="portofolio/Excel Dashboard 2.jpg" alt="AI Analytics" class="portfolio-img" onclick="openZoom(this.src)">
+            <img src="Excel Dashboard 2.jpg" alt="AI Analytics" class="portfolio-img" onclick="openZoom(this.src)">
             <div class="portfolio-overlay">
               <h4>Sales & Inventory Dashboard</h4>
               <p>Microsoft Excel + Dax</p>
             </div>
           </div>
-          <!-- VIDEO -->
           <div class="portfolio-item">
-            <video src="portofolio/demo real-time dashboard.mp4" class="portfolio-video" controls></video>
+            <video src="demo real-time dashboard.mp4" class="portfolio-video" controls></video>
             <div class="portfolio-overlay">
-              <h4>Marketing campaign analysis </h4>
+              <h4>Marketing campaign analysis</h4>
               <p>Power BI, Python, MySQL</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- PENGALAMAN KERJA: 3 PERUSAHAAN BERJENJANG -->
+      <!-- PENGALAMAN KERJA -->
       <section class="experience">
         <h3 class="section-title"><i class="fas fa-briefcase"></i> Pengalaman Kerja</h3>
-
-        <!-- PERUSAHAAN 1 -->
         <div class="company-group">
           <div class="company-name">PT. Rajawali Nusindo</div>
           <div class="job">
@@ -292,8 +248,6 @@
             </div>
           </div>
         </div>
-
-        <!-- PERUSAHAAN 2 -->
         <div class="company-group">
           <div class="company-name">Upwork <i>(Freelance)</i></div>
           <div class="job">
@@ -304,7 +258,7 @@
                 <li>Desain ulang UI/UX dashboard admin</li>
                 <li>Implementasi PWA & offline mode</li>
                 <li>Support maintenance aplikasi desktop</li>
-                <li>Integrasi dengan  Printer thermal & Scanner</li>
+                <li>Integrasi dengan Printer thermal & Scanner</li>
                 <li>Desain UI/UX website</li>
               </ul>
             </div>
@@ -320,8 +274,6 @@
             </div>
           </div>
         </div>
-
-       <!-- PERUSAHAAN 3 -->
         <div class="company-group">
           <div class="company-name">PT. Navicom</div>
           <div class="job">
@@ -329,14 +281,13 @@
             <div class="period">Mar 2017 – Sep 2018</div>
             <div class="job-desc">
               <ul>
-                <li>Troubleshoting jaringan  </li>
+                <li>Troubleshoting jaringan</li>
                 <li>Instalasi Parabola</li>
                 <li>Instalasi CCTV</li>
               </ul>
             </div>
+          </div>
         </div>
-        
-
       </section>
 
       <!-- PENDIDIKAN -->
@@ -345,7 +296,7 @@
         <div class="job">
           <div class="job-title">D3 Teknik Komputer</div>
           <div class="company">Universitas Bina Sarana Informatika</div>
-          <div class="period">2014 – 2017 </div>
+          <div class="period">2014 – 2017</div>
         </div>
       </section>
 
@@ -359,22 +310,17 @@
   </div>
 
   <script>
-    // Ganti foto
     document.getElementById('profile-photo').ondblclick = function() {
-      const file = prompt('Masukkan nama file foto (contoh: foto-saya.jpg):');
+      const file = prompt('Masukkan nama file foto (contoh: Foto-saya.jpg):');
       if (file) this.src = file;
     };
 
-    // BACKGROUND MUSIC
     const bgMusic = document.getElementById('bg-music');
     bgMusic.volume = 0.3;
     document.body.addEventListener('click', function() {
-      if (bgMusic.paused) {
-        bgMusic.play().catch(() => {});
-      }
+      if (bgMusic.paused) bgMusic.play().catch(() => {});
     }, { once: true });
 
-    // ZOOM GAMBAR: KLIK GAMBAR → ZOOM + CLOSE BUTTON
     function openZoom(src) {
       const modal = document.getElementById('zoom-modal');
       const img = document.getElementById('zoom-img');
@@ -382,7 +328,6 @@
       modal.style.display = 'flex';
     }
 
-    // Tutup saat klik close atau background
     document.getElementById('close-zoom').onclick = closeZoom;
     document.getElementById('zoom-modal').onclick = function(e) {
       if (e.target === this) closeZoom();
@@ -394,5 +339,4 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </body>
-
 </html>
