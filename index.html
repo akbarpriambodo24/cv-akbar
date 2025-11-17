@@ -45,7 +45,7 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.3);
       backdrop-filter: blur(10px);
     }
-    .sidebar { position: sticky; top: 2rem; height: fit-content; }
+    .sidebar { position: static; top: 2rem; height: fit-content; }
 
     .photo {
       width: 160px; height: 160px; border-radius: 50%; object-fit: cover;
@@ -91,7 +91,7 @@
     .company-name { font-weight: 600; font-size: 1.1rem; color: var(--primary); margin-bottom: 0.8rem; }
     .job { margin-bottom: 1.2rem; padding-left: 1rem; position: relative; }
     .job::before {
-      content: ""; position: absolute; left: -1rem; top: 0.5rem;
+      content: ""; position: atbsolute; left: -1rem; top: 0.5rem;
       width: 8px; height: 8px; background: var(--primary); border-radius: 50%;
     }
     .job-title { font-weight: 600; color: #e2e8f0; font-size: 1rem; }
@@ -275,3 +275,4 @@
           <div class="company">Universitas Bina Sarana Informatika</div>
           <div class="period">2014 – 2017</div>
         </div>
+
